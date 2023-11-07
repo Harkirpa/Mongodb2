@@ -164,7 +164,7 @@ const addemployee=async(req,res)=>{
 const data2 = async (req, res) => {
     const data1=req.body;
     try {
-        const data =await product.find({}).toArray(); // Use the find method to retrieve data from the collection
+        const data =await product.find({}).toArray(); 
         res.send({msg:"Data retrieved successfully", data:data});
         console.log(data)
     } catch (error) {
@@ -175,7 +175,7 @@ const data2 = async (req, res) => {
 const data3 = async (req, res) => {
     const data1=req.body;
     try {
-        const data =await product.find({"salary":{$gt:"30000"}}).toArray(); // Use the find method to retrieve data from the collection
+        const data =await product.find({"salary":{$gt:"30000"}}).toArray(); 
         res.send({msg:"Salary successfully", data:data});
         console.log(data)
     } catch (error) {
@@ -186,7 +186,7 @@ const data3 = async (req, res) => {
 const data4= async (req, res) => {
     const data1=req.body;
     try {
-        const data =await product.find({"overallExp":{$gt:"2"}}).toArray(); // Use the find method to retrieve data from the collection
+        const data =await product.find({"overallExp":{$gt:"2"}}).toArray(); 
         res.send({msg:"Salary successfully", data:data});
         console.log(data)
     } catch (error) {
@@ -208,7 +208,7 @@ const data5 = async (req, res) => {
 const data6 = async (req, res) => {
     const data1=req.body;
     try {
-        const data =await product.updateMany({ "yearGrad": {$gt: "2015"}, "overallExp":{$gt: "1" }}); // Use the find method to retrieve data from the collection
+        const data =await product.updateMany({ "yearGrad": {$gt: "2015"}, "overallExp":{$gt: "1" }}); 
         res.send({msg:"Salary successfully", data:data});
         console.log(data)
     } catch (error) {
@@ -219,7 +219,7 @@ const data6 = async (req, res) => {
 const data7= async (req, res) => {
     const data1=req.body;
     try {
-        const data =await product.deleteMany({ "yearGrad": {$gt: "2015"}, "overallExp":{$gt: "1" }}); // Use the find method to retrieve data from the collection
+        const data =await product.deleteMany({ "yearGrad": {$gt: "2015"}, "overallExp":{$gt: "1" }}); 
         res.send({msg:"Salary successfully", data:data});
         console.log(data)
     } catch (error) {
